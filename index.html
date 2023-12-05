@@ -1,0 +1,197 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Fiscal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <div class="title-container">
+        <h1>Emitir nota fiscal</h1>
+    </div>
+    <form action="" class="form">
+        <div class="form-control">
+            <label for="nome">Nome:</label>
+            <input required type="text" name="nome">
+        </div>
+
+        <div class="form-control">
+            <label for="cnpj">CNPJ/CPF:</label>
+            <input required type="text" name="cnpj">
+        </div>
+
+        <div class="form-control">
+            <label for="uf">UF:</label>
+            <input required type="text" name="uf">
+        </div>
+
+        <div class="form-control">
+            <label for="municipio">Município:</label>
+            <input required type="text" name="municipio">
+        </div>
+
+        <div class="form-control">
+            <label for="endereco">Endereço:</label>
+            <input required type="text" name="endereco">
+        </div>
+
+        <div class="form-control">
+            <label for="email">E-mail:</label>
+            <input required type="text" name="email">
+        </div>
+
+        <div class="form-control">
+            <label for="valor">Valor:</label>
+            <input required type="number" name="valor" step="0.01">
+        </div>
+
+        <div class="form-control">
+            <label for="email">Descrição do serviço:</label>
+            <textarea name="descricao" cols="30" rows="10" required></textarea>
+        </div>
+        
+
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+
+
+    <div class="nota-fiscal">
+        
+        <div class="client-data-container">
+            <h1>TOMADOR DE SERVIÇOS</h1>
+            <div class="client-data">
+
+                <div class="data">
+                    <span>Nome/Razão Social: </span>
+                    <p id="nome">Value</p>
+                </div>
+               
+                <div class="data">
+                    <span>Endereço: </span>
+                    <p id="endereco">Value</p>
+                </div>
+               
+                <div class="data">
+                    <span>CPF/CNPJ: </span>
+                    <p id="cnpj">Value</p>
+                </div>
+    
+                <div class="data">
+                    <span>Município: </span>
+                    <p id="municipio">Value</p>
+                </div>
+    
+                <div class="data">
+                    <span>UF: </span>
+                    <p id="uf">Value</p>
+                </div>
+    
+                <div class="data">
+                    <span>E-mail: </span>
+                    <p id="email">Value</p>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div class="description">
+
+            <h1>DISCRIMINAÇÃO DOS SERVIÇOS</h1>
+
+            <div class="data">
+                <span>Data: </span>
+                <p id="data">
+
+                </p>
+            </div>
+
+            <div class="data">
+                <span>Descrição do serviço: </span>
+                <p id="descricao">
+
+                </p>
+            </div>
+        </div>
+        
+        <div class="total-container">
+            <h1>VALOR TOTAL DO SERVIÇO = </h1>
+            <p id="valor_total">Value</p>
+        </div>
+
+        <div class="other-taxes">
+            <ul>
+                <li class="tax">
+                    <span>INSS(R$):</span>
+                    <p >
+                        -
+                    </p>
+                </li>
+                
+                <li class="tax">
+                    <span>IRFF(R$):</span>
+                    <p>
+                        -
+                    </p>
+                </li>
+                
+                <li class="tax">
+                    <span>CSLL(R$):</span>
+                    <p>
+                        -
+                    </p>
+                </li>
+
+                <li class="tax">
+                    <span>COFINS(R$):</span>
+                    <p>
+                        -
+                    </p>
+                </li>
+
+                <li class="tax">
+                    <span>PIS/PASEP(R$):</span>
+                    <p>
+                        -
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+       
+
+        <div class="taxes-container">
+            <ul>
+                <li class="tax">
+                    <span>Base de Cálculo(R$): </span>
+                    <p id="valor">
+                        Value
+                    </p>
+                </li>
+                
+                <li class="tax">
+                    <span>Alíquota(%):</span>
+                    <p>
+                        5%
+                    </p>
+                </li>
+                
+                <li class="tax">
+                    <span>Valor do ISS(R$):</span>
+                    <p id="iss">
+                        Value
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        
+
+        <button class="print" >Imprimir</button>
+    </div>
+
+</body>
+
+</html>

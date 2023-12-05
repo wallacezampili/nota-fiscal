@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media print {
+    .form, .title-container, .print{
+        visibility: hidden;
+    }
+
+    .nota-fiscal{
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #067BC2;
+    margin-bottom: 1.5em;
+    padding: 15px;
+}
+.title-container h1{
+    color: #fff;
+    font-weight: 100;
+}
+
+.form{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+
+.form-control{
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control input{
+    width: 100%;
+    align-self: center;
+    height: 2em;
+    border: 1px solid #067BC2;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #067BC2;
+    outline-color: #0770b1;
+}
+.form-control label
+{
+    
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #067BC2;
+    font-weight: 600;
+}
+
+textarea
+{
+    width: 100%;
+    align-self: center;
+    border: 1px solid #067BC2;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: #067BC2;
+    outline-color: #0770b1;
+    resize: none;
+}
+
+.btn, .print{
+    margin-top: 15px;
+    padding: 5px 14px;
+    font-size: 18px;
+    background-color: transparent;
+    border-radius: 5px;
+    border:2px solid #067BC2;
+    color:#067BC2;
+    transition: 0.2s;
+    
+}
+.btn:hover
+{
+    background-color: #067BC2;
+    color: white;
+    
+    
+}
+
+/* Nota fiscal */
+
+.nota-fiscal
+{
+    margin: 80px auto;
+    width: 80%;
+    display: none;
+}
+
+/* Tomador de serviços */
+
+.client-data-container{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.client-data-container h1
+{
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+
+.client-data
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 15px;
+    width: 100%;
+}
+
+.data
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.data span{
+    font-weight: bold;
+}
+
+
+/* Total */
+
+.total-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-top: 0px;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+.total-container h1
+{
+    font-size: 1.5em;
+}
+
+.total-container p {
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-left: 0.3em;
+}
+
+
+/* Taxas */
+
+.taxes-container, .other-taxes
+{
+    border: 2px solid black;
+    border-top: 0px;
+    border-collapse: collapse;
+    border-top: 0px;
+}
+.taxes-container ul, .other-taxes ul{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    list-style-type: none;
+}
+.taxes-container .tax{
+    border: 2px solid black;
+    border-top: 0px;
+    padding: 15px;
+    margin: 0 -2px -2px 0px
+}
+
+.taxes-container .tax:first-child, .other-taxes .tax:first-child{
+    border-left: 0;
+}
+
+.taxes-container .tax p, .other-taxes .tax p{
+    font-weight: bold;
+}
+
+.other-taxes ul
+{
+    grid-template-columns: auto auto auto auto auto;
+}
+.other-taxes .tax
+{
+    border: 2px solid black;
+    border-top: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 0 -2px -2px 0px
+}
+
+/* Descrição */
+.description
+{
+    border: 2px solid black;
+    border-top: 0px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.description h1
+{
+    font-size: 1.5em;
+    align-self: center;
+}
+
